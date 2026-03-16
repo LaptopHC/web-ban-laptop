@@ -1,105 +1,68 @@
-let products = [
-
-{
-name:"MacBook Pro 2019",
-price:21500000,
-img:"https://images.unsplash.com/photo-1517336714731-489689fd1ca8"
-},
-
-{
-name:"Dell XPS 13",
-price:15900000,
-img:"https://images.unsplash.com/photo-1496181133206-80ce9b88a853"
-},
-
-{
-name:"ThinkPad X1 Carbon",
-price:11500000,
-img:"https://images.unsplash.com/photo-1588872657578-7efd1f1555ed"
-},
-
-{
-name:"HP EliteBook 840",
-price:9900000,
-img:"https://images.unsplash.com/photo-1541807084-5c52b6b3adef"
+body{
+font-family:Arial;
+margin:0;
+background:#f5f5f5;
 }
 
-]
-
-let cart = JSON.parse(localStorage.getItem("cart")) || []
-
-function loadProducts(){
-
-let html=""
-
-products.forEach((p,i)=>{
-
-html+=`
-
-<div class="card">
-
-<img src="${p.img}">
-
-<h3>${p.name}</h3>
-
-<p class="price">${p.price.toLocaleString()}đ</p>
-
-<button onclick="addCart(${i})">Thêm giỏ</button>
-
-</div>
-
-`
-
-})
-
-document.getElementById("products").innerHTML=html
-
+header{
+background:#000;
+color:white;
+padding:15px;
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
 
-function addCart(i){
-
-cart.push(products[i])
-
-localStorage.setItem("cart",JSON.stringify(cart))
-
-document.getElementById("cart-count").innerText=cart.length
-
-alert("Đã thêm vào giỏ hàng")
-
+header input{
+padding:8px;
+width:200px;
 }
 
-function searchProduct(){
-
-let keyword=document.getElementById("search").value.toLowerCase()
-
-let filtered=products.filter(p=>p.name.toLowerCase().includes(keyword))
-
-let html=""
-
-filtered.forEach(p=>{
-
-html+=`
-
-<div class="card">
-
-<img src="${p.img}">
-
-<h3>${p.name}</h3>
-
-<p class="price">${p.price.toLocaleString()}đ</p>
-
-<button>Thêm giỏ</button>
-
-</div>
-
-`
-
-})
-
-document.getElementById("products").innerHTML=html
-
+.banner{
+background:#ff6600;
+color:white;
+text-align:center;
+padding:40px;
 }
 
-document.getElementById("cart-count").innerText=cart.length
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+padding:30px;
+}
 
-loadProducts()
+.card{
+background:white;
+padding:15px;
+border-radius:10px;
+box-shadow:0 4px 8px rgba(0,0,0,0.1);
+text-align:center;
+}
+
+.card img{
+width:100%;
+border-radius:8px;
+}
+
+.price{
+color:red;
+font-weight:bold;
+font-size:20px;
+}
+
+button{
+background:#ff6600;
+color:white;
+border:none;
+padding:10px;
+border-radius:6px;
+cursor:pointer;
+}
+
+footer{
+background:#222;
+color:white;
+text-align:center;
+padding:30px;
+}
