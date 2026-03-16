@@ -66,10 +66,11 @@ let html=""
 filtered.forEach((p,i)=>{
 
 html+=`
-
 <div class="card">
 
+<a href="product.html?id=${i}">
 <img src="${p.img}">
+</a>
 
 <h3>${p.name}</h3>
 
