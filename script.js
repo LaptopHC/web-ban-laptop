@@ -1,3 +1,4 @@
+localStorage.setItem("products",JSON.stringify(products))
 let products = [
 
 {name:"MacBook Pro 2019",price:21500000,img:"https://images.unsplash.com/photo-1517336714731-489689fd1ca8"},
