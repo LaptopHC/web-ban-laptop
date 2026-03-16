@@ -66,3 +66,16 @@ color:white;
 text-align:center;
 padding:30px;
 }
+.product-detail{
+padding:40px;
+}
+
+.detail{
+display:flex;
+gap:30px;
+}
+
+.detail img{
+width:400px;
+border-radius:10px;
+}
