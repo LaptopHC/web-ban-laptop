@@ -1,48 +1,48 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="vi">
 <head>
 <meta charset="UTF-8">
-<title>LaptopHC - Laptop Mỹ Hà Nội</title>
-<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LaptopHC - Laptop giá tốt Hà Nội</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
 <header>
-<h1>💻 LaptopHC</h1>
+
+<div class="top">
+
+<img src="images/logo.png" class="logo">
+
+<nav>
+<a href="index.html">Trang chủ</a>
+<a href="cart.html">Giỏ hàng</a>
+</nav>
+
+</div>
 
 <input type="text" id="search" placeholder="Tìm laptop..." onkeyup="searchProduct()">
-
-<a href="cart.html">🛒 Giỏ hàng (<span id="cart-count">0</span>)</a> <a href="admin.html">🔐 Admin</a>
 
 </header>
 
 <section class="banner">
-<h2>Laptop Mỹ - Hàng cũ giá tốt</h2>
-<p>MacBook • Dell • ThinkPad • HP</p>
+<img src="images/banner.jpg">
 </section>
 
-<section id="products" class="products"></section>
+<section class="products" id="productList"></section>
 
 <footer>
 
-<p>📍 Mễ Trì Thượng - Nam Từ Liêm - Hà Nội</p>
-
-<a href="tel:0988531820"><button>📞 Gọi điện</button></a>
-
-<a href="https://zalo.me/0988531820"><button>💬 Zalo</button></a>
-
-<a href="https://m.me/"><button>Messenger</button></a>
-
-<a href="https://facebook.com"><button>📘 Facebook</button></a>
-
-<a href="https://tiktok.com"><button>🎵 TikTok</button></a>
+<p>📍 98 Mễ Trì Thượng, Nam Từ Liêm, Hà Nội</p>
+<p>☎ 0988.531.820</p>
 
 </footer>
 
-<script src="script.js"></script>
+<a href="tel:0988531820" class="call">📞</a> <a href="https://zalo.me/0988531820" class="zalo">Zalo</a> <a href="https://m.me/" class="messenger">Messenger</a>
+
+<script src="js/main.js"></script>
 
 </body>
 </html>
-
